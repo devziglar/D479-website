@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Stay - Taniti</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #f0f0f0;
+      padding: 15px;
+    }
+    nav {
+      margin: 10px 0;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .form-section {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .form-section img {
+      max-width: 300px;
+      height: auto;
+    }
+    form {
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<script src="script.js"></script>
+<body>
+
+  <header>
+    <h1>Book a Stay</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Taniti</a>
+      <a href="book.html">Book a Stay</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="form-section">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrwPF9begOVRAmizlWRaGFl5qQTaC9uMmSFA&s" alt="2 yellow magaritas">
+      
+      <form onsubmit="submitForm(); return false;">
+        <h2>Schedule Your Trip Now</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="date">Travel Date:</label>
+        <input type="date" id="date" required>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+        Contact Information
+        Contact email: taniti0@gmail.com
+        Contact number: (800) 200-0000
+    </p>
+  </footer>
+
+  <script>
+    function submitForm() {
+      alert("Thanks! Your trip request has been submitted.");
+    }
+  </script>
+
+</body>
+</html>
