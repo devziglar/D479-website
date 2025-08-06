@@ -35,6 +35,39 @@
 
 Lodging ranges from budget hostels to a large four-star resort, with many family-owned hotels and bed-and-breakfasts, all regulated and inspected by the government. While the beaches, rainforest, and volcano draw most visitors, Merriton Landing—on the north side of Yellow Leaf Bay—offers attractions like a history museum, fishing tours, snorkeling, zip-lining, pubs, a microbrewery, dance club, movie theater, art galleries, bowling, and more. With a legal drinking age of 18 that is loosely enforced, the island’s pubs are a popular nighttime destination, operating daily from 9 a.m. to midnight.</p>
     <button onclick="submitForm()">Schedule your Trip now</button>
+    <button onclick="showForm()">Schedule your Trip now</button>
+
+<div id="formContainer" style="display: none;">
+  <form onsubmit="submitForm(); return false;">
+    <h2>Schedule Your Trip Now</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="date">Travel Date:</label>
+    <input type="date" id="date" required>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<div id="thankYouMessage" style="display: none;">
+  <h3>Thank you for scheduling your trip!</h3>
+</div>
+<script>
+  function showForm() {
+    document.getElementById("formContainer").style.display = "block";
+    document.getElementById("thankYouMessage").style.display = "none";
+  }
+
+  function submitForm() {
+    // Optionally: process the form data here
+    document.getElementById("formContainer").style.display = "none";
+    document.getElementById("thankYouMessage").style.display = "block";
+  }
+</script>
   </main>
 
   <footer>
@@ -45,10 +78,6 @@ Lodging ranges from budget hostels to a large four-star resort, with many family
     </p>
   </footer>
 
-  <script>
-    function submitForm() {
-      alert("Trip Scheduled! Thank you for booking with Taniti.");
-    }
-  </script>
+  
 </body>
 </html>

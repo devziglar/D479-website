@@ -35,8 +35,39 @@
     <p>Taniti is a small Pacific island with diverse landscapes, including sandy and rocky beaches, tropical rainforests, and a mountainous interior featuring an active volcano. Most of its 20,000 residents live in Taniti City, the island’s only urban area located at Merriton Landing. Historically, the local economy relied on fishing and agriculture, but recent growth in tourism has shifted it toward service-based industries. Visitors can enjoy traditional seafood dishes and explore cultural sites, such as the island’s history museum. While English is widely spoken among younger residents, many in rural areas still use the native language. Tourists should be aware of local customs, including restricted alcohol sales from midnight to 9 a.m. Although violent crime is rare, petty theft can occur in busy areas, so caution is advised.
 
     </p>
-    
-    <button onclick="submitForm()">Schedule your Trip now</button>
+    <button onclick="showForm()">Schedule your Trip now</button>
+
+<div id="formContainer" style="display: none;">
+  <form onsubmit="submitForm(); return false;">
+    <h2>Schedule Your Trip Now</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="date">Travel Date:</label>
+    <input type="date" id="date" required>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<div id="thankYouMessage" style="display: none;">
+  <h3>Thank you for scheduling your trip!</h3>
+</div>
+<script>
+  function showForm() {
+    document.getElementById("formContainer").style.display = "block";
+    document.getElementById("thankYouMessage").style.display = "none";
+  }
+
+  function submitForm() {
+    // Optionally: process the form data here
+    document.getElementById("formContainer").style.display = "none";
+    document.getElementById("thankYouMessage").style.display = "block";
+  }
+</script>
   </main>
 
   <footer>
@@ -47,10 +78,6 @@
     </p>
   </footer>
 
-  <script>
-    function submitForm() {
-      alert("Trip Scheduled! Thank you for booking with Taniti.");
-    }
-  </script>
+  
 </body>
 </html>
